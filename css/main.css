@@ -1,0 +1,1421 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@font-face {
+font-family: 'Waltograph';
+src: url(../fonts/waltograph.otf);
+}
+
+button,
+input,
+select,
+textarea {
+}
+
+html {
+    /*background-color: rgb(151, 208, 128);*/
+    font-size:100%;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%
+}
+
+html, body {
+    font-family: 'IM Fell English', serif;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+    color: #000;
+    margin: 0;
+} 
+
+a {
+    text-decoration: none;
+    opacity: 0.5;
+    color: #000;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+/* ---------------------------------- NAV STYLING ---------------------------------- */
+
+.page-nav {
+    position: fixed;
+    height: 100%;
+    right: 0;
+    margin-right: 30px;
+    /*margin-top: 8px;*/
+    z-index: 1000000;
+}
+
+.page-nav ul {
+    width: 12px;
+    -webkit-padding-start: 0px;
+}
+
+.page-nav li a {
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.5;
+    margin-bottom: 8px;
+    float: left;
+    position: relative;
+}
+
+.page-nav li .current {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    margin-left: -8px; 
+    margin-top: -10px; 
+    margin-bottom: 18px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.page-nav li a .hover-thumb {
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    right: 50%;
+    top: 50%;
+    opacity: 1 !important;
+}
+
+.page-nav li a:hover {
+    opacity: 1.0 !important;
+}
+
+.page-nav li a:hover .hover-thumb {
+    width: 30px;
+    height: 30px;
+    right: 18px;
+    margin-top: -15px;
+    opacity: 1 !important;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -moz-transition: all 0.2s ease-out 0s;
+    -o-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+
+/* SET NAV ICONS */
+.page-nav .snow .hover-thumb, .page-nav .snow .current { background-image: url(../img/nav/snow.png);}
+.page-nav .pinocchio .hover-thumb, .page-nav .pinocchio .current { background-image: url(../img/nav/pinocchio.png);}
+.page-nav .cinderella .hover-thumb, .page-nav .cinderella .current { background-image: url(../img/nav/cinderella.png);}
+.page-nav .peter .hover-thumb, .page-nav .peter .current { background-image: url(../img/nav/peter.png);}
+.page-nav .aurora .hover-thumb, .page-nav .aurora .current { background-image: url(../img/nav/aurora.png);}
+.page-nav .mowgli .hover-thumb, .page-nav .mowgli .current { background-image: url(../img/nav/mowgli.png);}
+.page-nav .ariel .hover-thumb, .page-nav .ariel .current { background-image: url(../img/nav/ariel.png);}
+.page-nav .belle .hover-thumb, .page-nav .belle .current { background-image: url(../img/nav/belle.png);}
+.page-nav .pocahontas .hover-thumb, .page-nav .pocahontas .current { background-image: url(../img/nav/pocahontas.png);}
+.page-nav .rapunzel .hover-thumb, .page-nav .rapunzel .current { background-image: url(../img/nav/rapunzel.png);}
+
+/* ---------------------------------- END NAV STYLING ---------------------------------- */
+
+/* ----------------------------------- BODY STYLING ------------------------------------ */
+
+#skrollr-body {
+    width: 100%;
+    height: 100%;
+}
+
+.story {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgb(151, 208, 128);
+}
+
+/* ---------------------------- intro -------------------------------- */
+
+#intro {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(151, 208, 128);
+    /*background-image: url('../img/maleficent.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;*/
+}
+
+.intro-inner {
+    width: 1000px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+
+.intro-inner #logo {
+    position: absolute;
+    margin-left: 480px;
+    margin-top: 70px;
+}
+
+.intro-inner #name {
+    margin-left: 500px;
+    margin-top: 220px;
+}
+
+.intro-inner h3 {
+    font-family: 'IM Fell English', serif;
+    font-size: 60px;
+    margin: 0;
+    margin-top: -25px;
+    margin-left: 100px;
+}
+
+.intro-inner #title {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 440px;
+    margin-top: 30px;
+    width: 800px;
+}
+
+.intro-inner #about {
+    font-size: 21px;
+    margin-left: 440px;
+    margin-top: 2px;
+    letter-spacing: 0px;
+}
+
+.intro-inner span {
+    font-family: 'Miniver', cursive;
+    font-size: 37px;
+    display: block;
+    margin-left: 470px;
+    margin-top: 60px;
+}
+
+#intro #maleficent {
+    bottom: 0;
+    position: absolute;
+    left: 1%;
+}
+
+#intro #flames {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------- end intro ----------------------------- */
+/* -------------------------- snow white ---------------------------- */
+
+.snow-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.snow-inner img {
+    position: absolute;
+}
+
+.snow-inner .queen {
+    left: 12%;
+    top: 130px;
+}
+
+.snow-inner #proof {
+    left: 58%;
+    top: 500px;
+    width: 400px;
+    position: absolute;
+}
+
+.snow-inner #magicmirror {
+    position: absolute;
+    font-size: 22px;
+    top: 150px;
+    left: 41%;
+}
+
+.snow-inner #fairest {
+    position: absolute;
+    font-size: 22px;
+    line-height: 34px;
+    top: 175px;
+    left: 41%;
+}
+
+.snow-inner #thouqueen {
+    font-size: 25px;
+    left: 47%;
+    top: 330px;
+    position: absolute;
+}
+
+.snow-inner #frame {
+    left: 63%;
+}
+
+.snow-inner .dinner {
+    top: 410px;
+    position: relative;
+}
+
+.snow-inner #table {
+    position: absolute;
+}
+
+.snow-inner .heartbox {
+    top: 10px;
+    left: 330px;
+    position: absolute;
+}
+
+.snow-inner #cannibal {
+    width: 283px;
+    left: 69.5%;
+    top: 90px;
+    position: absolute;
+}
+
+.snow-inner #lungs {
+    top: 465px;
+    left: 28%;
+}
+
+/* ------------------------ end snow white -------------------------- */
+/* -------------------------- pinocchio ----------------------------- */
+.pinocchio-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.pinocchio-inner img {
+    position: absolute;
+}
+
+.pinocchio-inner .jiminysplat {
+    position: relative;
+}
+
+.pinocchio-inner #jiminy {
+    left: 310px;
+}
+
+.pinocchio-inner #splat {
+    margin-top: 40px;
+    left: 330px;
+}
+
+.pinocchio-inner #mallet {
+    top: 375px;
+    position: absolute;
+    width: 750px;
+}
+
+.pinocchio-inner .pino {
+    top: 300px;
+}
+
+.pinocchio-inner #drown {
+    top: 400px;
+    left: 100px;
+    position: absolute;
+    width: 500px;
+    z-index: -1;
+}
+
+#pinocchio #water {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.pinocchio-inner .fish {
+    top: 160px;
+    z-index: 1;
+}
+
+.pinocchio-inner #devour {
+    color: #fff;
+    top: 150px;
+    right: -20px;
+    position: absolute;
+    width: 450px;
+    z-index: 1;
+}
+
+.pinocchio-inner #wood {
+    top: 500px;
+    left: 65%;
+}
+
+.pinocchio-inner #eaten {
+    color: #fff;
+    top: 550px;
+    position: absolute;
+    width: 500px;
+    z-index: 1;
+}
+
+/* ------------------------ end pinocchio ---------------------------- */
+/* ------------------------- cinderella ------------------------------ */
+
+.cinderella-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.cinderella-inner img {
+    position: absolute;
+}
+
+.cinderella-inner #title {
+    top: 40px;
+    left: 20%;
+}
+
+.cinderella-inner #princetar {
+    top: 230px;
+    right: -15%;
+    position: absolute;
+    width: 420px;
+    padding-right: 10px;
+}
+
+#cinderella #ball {
+    position: relative;
+    top: 220px;
+}
+
+#cinderella #ball img {
+    position: absolute;
+}
+
+.cinderella-inner .stepsisters {
+    bottom: 80px;
+}
+
+.cinderella-inner #sisterslipper {
+    top: 280px;
+    position: absolute;
+    width: 450px;
+    left: 28%;
+}
+
+/* ------------------------ end cinderella ---------------------------- */
+/* --------------------------- peter pan ------------------------------ */
+.peter-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.peter-inner img {
+    position: absolute;
+}
+
+.peter-inner #peter-title {
+    left: 75%;
+    top: 500px;
+}
+
+.peter-inner #triangle {
+    color: #fff;
+    top: 330px;
+    position: absolute;
+    width: 350px;
+    left: 32%;
+}
+
+.peter-inner #jealous {
+    color: #fff;
+    top: 330px;
+    position: absolute;
+    width: 420px;
+    left: 250px;
+}
+
+.peter-inner .neverland {
+    top: 120px;
+    left: 18%;
+}
+
+.peter-inner #lostboys {
+    color: #fff;
+    position: absolute;
+    width: 520px;
+    top: 50px;
+    left: 60%;
+}
+
+.peter-inner #hook {
+    color: #fff;
+    position: absolute;
+    top: 120px;
+    left: 5%;
+}
+
+/* -------------------------- end peter pan ---------------------------- */
+/* ------------------------- sleeping beauty --------------------------- */
+
+.aurora-inner .castle {
+    top: 0;
+}
+
+.aurora-inner #cursed {
+    top: 50px;
+    left: -10%;
+    width: 500px;
+    position: absolute;
+}
+
+.aurora-inner .curtain {
+    left: 4%;
+}
+
+.aurora-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.aurora-inner img {
+    position: absolute;
+}
+
+.aurora-inner #aurora-title {
+    left: 15%;
+    top: 570px;
+}
+
+.aurora-inner .aurora {
+    top: 320px;
+    left: 14%;
+}
+
+.aurora-inner #abandoned {
+    position: absolute;
+    top: 100px;
+    left: 70%;
+    width: 400px;
+}
+
+.aurora-inner #rape {
+    position: absolute;
+    top: 100px;
+    left: 14%;
+    width: 400px;
+}
+
+.aurora-inner #pregnant {
+    position: absolute;
+    top: 190px;
+    left: 14%;
+    width: 400px;
+}
+
+.aurora-inner #splinter {
+    position: absolute;
+    top: 70px;
+    left: 27%;
+    width: 600px;
+}
+
+.aurora-inner #awakens {
+    position: absolute;
+    top: 200px;
+    left: 27%;
+    width: 600px;
+}
+
+/* ----------------------- end sleeping beauty ------------------------ */
+/* ------------------------- the jungle book -------------------------- */
+
+.mowgli-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.mowgli-inner img{
+    position: absolute;
+}
+
+.mowgli-inner .village {
+    top: 220px;
+}
+
+.mowgli-inner .village-destroyed {
+    top: 600px;
+}
+
+.mowgli-inner .mowgli {
+    top: 380px;
+}
+
+.mowgli-inner #mowglireturns {
+    position: absolute;
+    top: 170px;
+    left: 40%;
+    width: 590px;
+}
+
+.mowgli-inner .mob {
+    top: 280px;
+}
+
+.mowgli-inner #banished {
+    position: absolute;
+    top: 170px;
+    left: 40%;
+    width: 600px;
+}
+
+.mowgli-inner #revenge {
+    position: absolute;
+    /*top: 575px;*/
+    bottom: 80px;
+    left: 25%;
+    width: 600px;
+}
+
+.mowgli-inner #destroyer {
+    position: absolute;
+    /*top: 575px;*/
+    bottom: 80px;
+    left: 28%;
+    width: 600px;
+}
+
+/* ----------------------- end the jungle book ------------------------ */
+/* ----------------------- the little mermaid ------------------------- */
+
+.ariel-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.ariel-inner img{
+    position: absolute;
+}
+
+#thelittlemermaid {
+    overflow: hidden;
+}
+
+.ariel-inner .arielwater {
+    bottom: 15%;
+}
+
+#thelittlemermaid .ocean {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    bottom: -20%;
+}
+
+.ariel-inner .feet {
+    position: absolute;
+    top: 225px;
+    width: 550px;
+}
+
+.ariel-inner #legs {
+    position: relative;
+}
+
+#thelittlemermaid #beach {
+    position: absolute;
+    height: 75%;
+    width: 100%;
+}
+
+.ariel-inner #dance {
+    position: absolute;
+    width: 600px;
+    right: -10%;
+}
+
+.ariel-inner #wedding {
+    position: absolute;
+    width: 600px;
+    top: 100px;
+}
+
+.ariel-inner #ericwedding {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+}
+
+.ariel-inner #kill {
+    position: absolute;
+    width: 650px;
+    top: 200px;
+}
+
+.ariel-inner #sacrifice {
+    position: absolute;
+    width: 600px;
+    /*top: 550px;*/
+    bottom: 120px;
+}
+
+.ariel-inner .dissolving {
+    top: 20px;
+}
+
+#thelittlemermaid #dissolve {
+    background-color: rgb(61, 146, 196);
+    position: absolute;
+    border-radius: 40%;
+    top: 30%; 
+    left: 36%;
+}
+
+.ariel-inner #deeds {
+    position: absolute;
+    width: 700px;
+    top: 520px;
+    left: 10%;
+    color: #fff;
+}
+
+/* --------------------- end the little mermaid ----------------------- */
+/* ---------------------- beauty and the beast ------------------------ */
+
+.belle-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.belle-inner img{
+    position: absolute;
+}
+
+.belle-inner .enchantedmirror {
+    top: 60px;
+    left: 70%;
+}
+
+.belle-inner #home {
+    position: absolute;
+    top: 300px;
+    left: 2.5%;
+    width: 600px;
+}
+
+.belle-inner #bellesisters {
+    position: absolute;
+    top: 450px;
+    left: 2.5%;
+    width: 600px;
+}
+
+.belle-inner #bellemirror {
+    position: absolute;
+    top: 350px;
+    left: 2.5%;
+    width: 550px;
+}
+
+.belle-inner #beast {
+    top: 230px;
+    left: 15%;
+}
+
+.belle-inner #gaston {
+    top: 42px;
+    left: 68.3%;
+}
+
+.belle-inner #nogaston {
+    position: absolute;
+    top: 300px;
+    left: 2.5%;
+    width: 550px;
+}
+
+.belle-inner #heartbreak {
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    width: 550px;
+}
+
+.belle-inner #breakcurse {
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    width: 550px;
+}
+
+/* -------------------- end beauty and the beast ---------------------- */
+/* --------------------------- pocahontas ----------------------------- */
+
+#pocahontas {
+    overflow: hidden;
+}
+
+.pocahontas-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.pocahontas-inner img{
+    position: absolute;
+}
+
+.pocahontas-inner .poca {
+    left: -8%;
+    bottom: 0%;
+}
+
+.pocahontas-inner #historical {
+    position: absolute;
+    bottom: 420px;
+    left: 32%;
+    width: 550px;
+    color: #fff;
+}
+
+.pocahontas-inner #john {
+    position: absolute;
+    bottom: 330px;
+    left: 32%;
+    width: 550px;
+    color: #fff;
+}
+
+.pocahontas-inner #captured {
+    position: absolute;
+    bottom: 370px;
+    left: 30%;
+    width: 600px;
+    color: #fff;
+}
+
+.pocahontas-inner .englishframe {
+    left: 45%;
+    top: 200px;
+}
+
+.pocahontas-inner #baptized {
+    position: absolute;
+    top: 320px;
+    left: 0%;
+    width: 400px;
+}
+
+.pocahontas-inner #savage {
+    position: absolute;
+    top: 320px;
+    left: 4%;
+    width: 400px;
+}
+
+.pocahontas-inner #ill {
+    position: absolute;
+    top: 270px;
+    left: 5%;
+    width: 500px;
+}
+
+.pocahontas-inner #dies {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+    width: 500px;
+}
+
+.pocahontas-inner #cod {
+    position: absolute;
+    top: 250px;
+    left: 6%;
+    width: 800px;
+}
+
+.pocahontas-inner #poison {
+    position: absolute;
+    top: 400px;
+    left: 6%;
+    width: 800px;
+}
+
+.pocahontas-inner .poison {
+    top: 500px;
+    left: 37%;
+}
+
+/* ------------------------- end pocahontas --------------------------- */
+/* ---------------------------- tangled ------------------------------- */
+
+#tangled {
+    overflow: hidden;
+}
+
+.rapunzel-inner {
+    width: 940px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.rapunzel-inner img{
+    position: absolute;
+}
+
+#tangled #tower {
+    position: absolute;
+    bottom: -2%;
+    right: 0%;
+}
+
+.rapunzel-inner #rapunzelrapunzel {
+    position: absolute;
+    font-size: 24px;
+    /*top: 400px;*/
+    bottom: 50%;
+    left: 35%;
+    width: 800px;
+}
+
+.rapunzel-inner #gimmehair {
+    position: absolute;
+    font-size: 24px;
+    /*top: 440px;*/
+    bottom: 45%;
+    left: 37%;
+    width: 800px;
+}
+
+.rapunzel-inner .rapunzel {
+    bottom: -10%;
+}
+
+#tangled #forestground {
+    position: absolute;
+    height: 38%;
+    width: 100%;
+}
+
+#tangled #desert {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+}
+
+.rapunzel-inner #dame {
+    position: absolute;
+    top: 240px;
+    left: 0%;
+    width: 650px;
+}
+
+.rapunzel-inner #thorns {
+    position: absolute;
+    color: #fff;
+    top: 200px;
+    left: 8%;
+    width: 800px;
+}
+
+.rapunzel-inner #blind {
+    position: absolute;
+    color: #fff;
+    top: 200px;
+    width: 800px;
+}
+
+.rapunzel-inner #together {
+    position: absolute;
+    left: 10%;
+    top: 210px;
+    width: 800px;
+}
+
+.rapunzel-inner #happilyeverafter {
+    position: absolute;
+    left: 15%;
+    top: 225px;
+    width: 700px;
+}
+
+/* -------------------------- end tangled ----------------------------- */
+
+.end-inner {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.end-inner img {
+    position: absolute;
+}
+
+#end {
+    background-image: url(../img/end_border.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+
+#end a {
+    opacity: 0.9;
+}
+
+#end a:hover {
+    opacity: 1;
+}
+
+#end h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+#end #end-nav-wrap{
+    width: 750px;
+    height: 270px;
+    margin: 0 auto;
+    background-color: rgb(93, 141, 74);
+    background-color: rgba(93, 141, 74, 0.5);
+    margin-bottom: 8px;
+}
+
+#end #end-nav {
+    list-style: none;
+}
+
+#end-nav li a{
+    width: 100px;
+    height: 100px;
+    display: block;
+    float: left;
+    margin-top: 25px; 
+    margin-left: 40px;
+    margin-bottom: 0;
+}
+
+#end a {
+    font-size: 24px;
+}
+
+#end #storybook {
+    position: relative;
+    left: 15%;
+    margin-top: 20px;
+}
+
+#end #storybook h4 {
+    position: absolute;
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+#end #storybook #original {
+    position: absolute;
+    width: 215px;
+    font-size: 18px;
+    margin: 70px 50px;
+}
+
+footer {
+    margin-top: 50px;
+    bottom: 190px;
+    position: relative;
+    width: 100%;
+}
+
+footer h1 {
+    font-family: 'Waltograph';
+    font-size: 80px;
+    margin-top: 0px;
+    margin-left: 50px;
+    letter-spacing: 0.01em;
+    position: absolute;
+}
+
+footer h3 {
+    font-family: 'IM Fell English', serif;
+    font-size: 37px;
+    margin-top: 62px;
+    margin-left: 82px;
+    line-height: 0.4em;
+    position: absolute;
+}
+
+footer #elise{
+    text-decoration: none;
+    font-family: 'Miniver', cursive;
+    letter-spacing: 0.02em;
+    right: 0;
+    margin-top: 40px;
+    margin-right: 100px;
+    position: absolute;
+}
+
+#end #disclaimer-icon{
+    position: absolute;
+    width: 25px;
+    opacity: 0.9;
+    right: 50px;
+    bottom: 40px;
+}
+
+#end #disclaimer-icon:hover {
+    opacity: 1;
+}
+
+#end #disclaimer {
+    position: absolute;
+    right: 0px;
+    bottom: 40px;
+    padding: 8px 12px;
+    color: #333;
+    letter-spacing: 0;
+    font-size: 16px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 200;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    display: none;
+}
+
+/* --- SET END-NAV ICONS --- */
+#end-nav li.snow a { background-image: url(../img/icon/snow.png);}
+#end-nav li.pinocchio a { background-image: url(../img/icon/pinocchio.png);}
+#end-nav li.cinderella a { background-image: url(../img/icon/cinderella.png);}
+#end-nav li.peter a { background-image: url(../img/icon/peter.png);}
+#end-nav li.aurora a { background-image: url(../img/icon/aurora.png);}
+#end-nav li.mowgli a { background-image: url(../img/icon/mowgli.png);}
+#end-nav li.ariel a { background-image: url(../img/icon/ariel.png);}
+#end-nav li.belle a { background-image: url(../img/icon/belle.png);}
+#end-nav li.pocahontas a { background-image: url(../img/icon/pocahontas.png);}
+#end-nav li.rapunzel a { background-image: url(../img/icon/rapunzel.png);}
+/* --- END END-NAV ICONS --- */
+
+/* --- SET BACKGROUND COLORS --- */
+#intro { background-color: rgb(151, 208, 128);}
+#snowwhite { background-color: rgb(216, 65, 82);}
+#pinocchio { background-color: rgb(190, 205, 198);}
+#cinderella { background-color: rgb(212, 178, 177);}
+#peterpan { background-color: rgb(60, 84, 145);}
+#sleepingbeauty { background-color: rgb(227, 222, 212);}
+#thelittlemermaid { background-color: rgb(225, 73, 109);}
+#beautyandthebeast {background-color: rgb(249, 232, 133);}
+#thejunglebook { background-color: rgb(180, 207, 155);}
+#pocahontas { background-color: rgb(164, 96, 96);}
+#tangled { background-color: rgb(222, 158, 182);}
+#end { background-color: rgb(151, 208, 128);}
+/* --- END BACKGROUND COLORS --- */
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
